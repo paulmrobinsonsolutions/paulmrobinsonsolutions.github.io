@@ -1,4 +1,6 @@
-## Hi there 👋
+<p>
+In general, colleagues know me as a highly motivated, forward-thinking perfectionist (it's a blessing and a curse) that will figure things out and then automate it. I'm a stickler for standards/consistency, frameworks and well, automation in any way shape or form. If something must be done twice, it's going to be automated so I can just click a button or just trigger from some event. And then grab a coffee. I thoroughly enjoy coffee! Next I think people would mention my passion and innovation with data-driven solutions. I love figuring out data to make it tell a story to find effeciencies and enable people! It's a passion which I think I have a knack for. I enjoy collaboration with people to solve a good problem, and my determination and creativity certainly helps. I mean I did win some art awards along with a few creative writing accolades. Shhh it's a secret...
+</p>
 
 <!--
 **paulmrobinsonsolutions/paulmrobinsonsolutions** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
