@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS (optional, for interactive components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+      // Function to handle the button click
+      function navigateToCode(scriptName) {
+        // Open the code repository in a new tab
+        window.open('https://github.com/paulmrobinsonsolutions/PowerShell/blob/main/' + scriptName, 'psWindow');
+      }
+    </script>
+    <title>Paul Robinson Bio</title>
+</head>
+<body>
+  <!-- wraps up the menu navigation to limit to a single source, no duplication here! -->
+  <iframe src="header.html" width="100%" height="100" frameborder="0" scrolling="no"></iframe>
+  <!-- main container - intro overview -->
+  <main class="container mt-2">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>PowerShell Projects</h1>
+        <p>
+          <!-- projects -->
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Azure Resource Cleanup aka ARC
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>ARC</strong> is an Azure CLI script that automates the deletion of files on Azure resources to keep VMs running smoothly 
+                  and efficiently. Through dynamic scripting, this script works through a range of Azure resources (VMs) targeting pre-defined folders
+                  and files to delete such as temp files, log files, and other unnecessary files that accumulate over time. This script will ensure
+                  that Virtual Machines have enough free disk space for optimal performance.
+                  <div class="mt-3">
+                    <strong>Key Technologies</strong>: PowerShell, Azure CLI, Azure Virtual Machines, dynamic scripting
+                  </div>
+                  <div class="mt-3" style="text-align: center;">
+                    <button class="btn btn-dark" type="button" id="viewCodeButtonOne" onclick="navigateToCode ('VM_C_Drive_Cleanup.ps1')">
+                    Click to View Code
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  App Installer
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This App Installer</strong> script was originally created to assist our IT VM maintenance team with an urgent app install to patch a
+                  security non-compliance risk of an out-dated app version so a new version needed to be pushed asap. The challenge... the Azure infrastructure
+                  consisted 150+ Virtual Machines, a daunting, time consuming manual effort that would have taken a sifnicant amount of time to complete with a
+                  high degree of error. So to combat the effort, I created this script to completely automate the installation process which also included the
+                  ability to step through the installation wizard screens. All you had to do was kick off the PowerShell script then check 20 or so minutes later
+                  when it would have completed and verify results with a nice display log of all activities done. Pretty slick! <br />
+                  In a nutshell... the script copied installation files files to the target VM, verified a few things, started the installer, stepped through the 
+                  installation wizard UI, and then performed post-installation tasks such as the cleanup of all files no longer needed after a successful install.
+                  <div class="mt-3">
+                    <strong>Key Technologies</strong>: PowerShell, Windows Installer
+                  </div>
+                  <div class="mt-3" style="text-align: center;">
+                    <button class="btn btn-dark" type="button" id="viewCodeButtonTwo" onclick="navigateToCode ('Custom_App_Installer.ps1')">
+                    Click to View Code
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  File Lock Inspector aka FLI
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>FLI</strong> was born out of necessity to keep an eye on a particular folder that would frequently have files locked 
+                  by our OCR software. Since the OCR application folks were unable to find the root cause or a way to handle things, with
+                  many meetings to troubleshoot the issue, I dug in and found that certain files were the problem. I then figured out how
+                  the OCR app worked through the files in the folder and simply by moving the offending file(s), the OCR app would then 
+                  pick back up processing as expected. Thus, this script came to life and could be scheduled to run from anywhere to watch 
+                  over things and move the "bad" files to a central location (folder) to be manually reviewed by Business folks. Aside from 
+                  averting days of lost time, this script also provided a way to quickly identify the "bad" files causing the issue which 
+                  could then be quickly removed ensuring operations could continue without interruption.
+                  <div class="mt-3">
+                    <strong>Key Technologies</strong>: PowerShell
+                  </div>
+                  <div class="mt-3" style="text-align: center;">
+                    <button class="btn btn-dark" type="button" id="viewCodeButtonThree" onclick="navigateToCode ('File_Lock_Remediation.ps1')">
+                    Click to View Code
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Delete Oldest Folder
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>Delete Oldest Folder</strong> script was a way to combat cleanup efforts for a few processes that simply did not have any
+                  mechanism in place to cleanup "old" folders/files so the number of folders/files just grew each day taking up more and more space
+                  which caused serious degradation in performance. So once this issue was identified, I created this script to quickly get something
+                  in place to delete folders/files to recover performance. Since all processes had a standard folder structure and a "daily work"
+                  folder that was created each day to keep all files needed to perform work on a given day, the "daily work" folders were timestamped
+                  and therefore, could be evaluated to determine the oldest folder. Due to timeout issues given the size and/or sheer number of files,
+                  this script only deletes one subfolder each run, the oldest folder. It just made for a clear and obvious distinction, as well.
+                  <div class="mt-3">
+                    <strong>Key Technologies</strong>: PowerShell, dynamic date evaluation
+                  </div>
+                  <div class="mt-3" style="text-align: center;">
+                    <button class="btn btn-dark" type="button" id="viewCodeButtonFour" onclick="navigateToCode ('Delete_Oldest_Folder.ps1')">
+                    Click to View Code
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </p>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
