@@ -59,13 +59,13 @@
               <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <strong>This App Installer</strong> script was originally created to assist our IT VM maintenance team with an urgent app install to patch a
-                  security non-compliance risk of an out-dated app version so a new version needed to be pushed asap. The challenge... the Azure infrastructure
-                  consisted 150+ Virtual Machines, a daunting, time consuming manual effort that would have taken a sifnicant amount of time to complete with a
+                  security non-compliance risk of an outdated app version so a new version needed to be pushed asap. The challenge... the Azure infrastructure
+                  consisted of 150+ Virtual Machines, a daunting, time consuming manual effort that would have taken a significant amount of time to complete with a
                   high degree of error. So to combat the effort, I created this script to completely automate the installation process which also included the
                   ability to step through the installation wizard screens. All you had to do was kick off the PowerShell script then check 20 or so minutes later
                   when it would have completed and verify results with a nice display log of all activities done. Pretty slick! <br />
-                  In a nutshell... the script copied installation files files to the target VM, verified a few things, started the installer, stepped through the 
-                  installation wizard UI, and then performed post-installation tasks such as the cleanup of all files no longer needed after a successful install.
+                  In a nutshell... the script copied installation files to the target VM, verified a few things, started the installer, stepped through the 
+                  installation wizard UI and then performed post-installation tasks such as the cleanup of all files no longer needed after a successful installation.
                   <div class="mt-3">
                     <strong>Key Technologies</strong>: PowerShell, Windows Installer
                   </div>
@@ -118,7 +118,7 @@
                   in place to delete folders/files to recover performance. Since all processes had a standard folder structure and a "daily work"
                   folder that was created each day to keep all files needed to perform work on a given day, the "daily work" folders were timestamped
                   and therefore, could be evaluated to determine the oldest folder. Due to timeout issues given the size and/or sheer number of files,
-                  this script only deletes one subfolder each run, the oldest folder. It just made for a clear and obvious distinction, as well.
+                  this script only deletes one subfolder on each run, the oldest folder. It just made for a clear and obvious distinction, as well.
                   <div class="mt-3">
                     <strong>Key Technologies</strong>: PowerShell, dynamic date evaluation
                   </div>

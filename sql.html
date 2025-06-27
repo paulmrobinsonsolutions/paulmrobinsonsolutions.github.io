@@ -60,14 +60,14 @@
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>ASQM</strong> was created to estimate when automated processes would finish all of their items to work. Just like the first
+                  <strong>ASQM</strong> was created to estimate when automated processes would finish all their items to work. Just like the first
                   stored procedure (described above) the purpose of this one was also to fill gaps to better support automated Production processes
                   which in turn would enable us to provide better service offerings. This stored procedure helped keep a pulse on how Production 
-                  processes were running while it's most beneficial purpose was to calculate when a process was expected to finish working all pending
-                  / queued items. Several factors were taken into consideration like, the number of pending items, number of machines running the process,
+                  processes were running while its most beneficial purpose was to calculate when a process was expected to finish working all pending
+                  / queued items. Several factors were taken into consideration like the number of pending items, number of machines running the process,
                   and the average handle time of each item (per process). Other beneficial data points were included in the results to provide a clearer
                   picture of processing health like, number of items completed, number of items with errors, number of pending items and average item work
-                  time across running process sessions. All of this information pulled together significantly helped to quickly identify how well things
+                  time across running process sessions. All this information pulled together significantly helped to quickly identify how well things
                   were running, if there were any issues, and most importantly when a process was expected to finish. This was critical since the big 
                   question that was always asked... when will a process finish? Thus, the "Ask 'em" phrase was born where I'd get asked a lot. I mean A LOT! lol
                   <div class="mt-3">
@@ -89,14 +89,15 @@
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>The Get Top N Utilization</strong> was another stored procedure to gather data around bot/resource utilization to gage how productive,
-                  or not, particular machines, bots (network logins) and/or machine resources were being utilized within a particular date range. This was also 
-                  based on Business Area since each Business Area should be limited to it's own process data and ultimately FTE costs, systems used, and support
-                  time would only apply to each individual Business Area for my team's service cost structure. I like this query because based on the database
-                  table relationships and structure I feel like this was a creative way to mash up different pieces of data to get really good insights that
-                  dramatically brought attention to process / bot utilization which gave clear insights into time spent which correlates to money so you know
-                  where money is being spent and/or saved. For example, one process may provided signficant savings while another process may be experiencing
-                  issues often so it's not being utilized well enough to save money. Which could also be an indicator that process improvement may be needed.
+                  <strong>The Get Top N Utilization</strong> was another powerful stored procedure that pulled together key data points around bot/resource utilization
+                  to gauge how productive, or not so productive, particular machines, bots (network logins) and/or schedules were being utilized within a particular 
+                  date range which highlighted opportunities for optimization. This was also based on Business Area since each Business Area should be limited to its
+                  own process data and ultimately FTE costs, resources used, and support time would only apply to each individual Business Area for my team's service cost 
+                  structure. I love this query! It certainly was a challenge but once I understood the database table relationships and table data, I was then able to 
+                  formulate key data points and then how to get those data points. I thought it was a very innovative way to mash up different pieces of data to get really
+                  good insights that dramatically brought attention to process / bot utilization which gave clear insights into time spent which correlates to money so you
+                  know where money is being spent and/or saved. For example, one process may provide significant cost benefit while another process may often-times experience 
+                  issues so it's not being utilized well enough to save money. Which could also be an indicator that process improvement may be needed.
                   <div class="mt-3">
                     <strong>Key Technologies</strong>: SQL, XML parsing, sub-queries, built-in SQL functions to drive results
                   </div>
@@ -117,11 +118,12 @@
               <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <strong>THE Daily Workload Manager</strong> simply manages daily operations of incoming work and work not yet fulfilled. This stored procedure was
-                  the backbone to feed data to an automated processes that would schedule field work in the respective Customer Service System. This query managed
-                  the day-to-day operations with work items to schedules, backing up work items, archiving work items, synching previously archived items, and more.
-                  The thing I like most about this stored procedure is it's use of A.C.I.D. SQL techniques to keep data pristine while it's also very methodical and
-                  efficient cleansing and moving data. And it ultimately performed so well with efficiencies that it had to be scaled back to allow for more time
-                  between scheduled work in order to account for emergency work that could arise any given day.
+                  the backbone to feed data to an automated process that would schedule field work in the respective Customer Service System. This query managed
+                  the day-to-day operations with work item scheduling, backing up work items, archiving work items, synching previously archived items, and more.
+                  The thing I love most about this stored procedure is its use of A.C.I.D. SQL techniques to keep data pristine while it's also very methodical and
+                  efficient cleansing and moving data. Its simplicity, once broken down to respective steps, is just a beutiful thing to see! It makes understanding
+                  the end-to-end process very easy to understand and to troubleshoot, if needed. And not to toot my own horn but it ultimately performed so well with
+                  efficiencies that it had to be scaled back to allow for more time between scheduled work to account for emergency work that could arise any given day.
                   <div class="mt-3">
                     <strong>Key Technologies</strong>: SQL, ACID safeguards, Try/Catch transactions, sub-queries
                   </div>
@@ -141,7 +143,7 @@
               </h2>
               <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>The Holiday Date Check</strong> is a fun little SQL scalar function that determines if a date falls on a holiday. A date is paassed in as
+                  <strong>The Holiday Date Check</strong> is a fun little SQL scalar function that determines if a date falls on a holiday. A date is passed in as
                   a parameter and then goes through various date evaluations based on US holidays. The cool thing is that this can be easily extended to contain any
                   date that would be considered a holiday. The purpose of this script was to feed into other scheduling stored procedures and functions to validate
                   a given date did or did not fall on a holiday, depending on the purpose of the over archiving query that would call this scalar function.
