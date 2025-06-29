@@ -137,25 +137,28 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingFive">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                  AD Searcher aka ADS
+                  Active Directory Searcher aka ADS
                 </button>
               </h2>
               <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <strong>ADS</strong> enables you to quickly search Active Directory to find users, security groups, roles, etc.
-                  Let's say you manage access to/for various things like file shares, SharePoint, AD groups, MS Entra ID, Azure Key vault, Virtual Machines, etc. 
-                  and one day you're told a contractor contract has ended and now you must remove access to sooo many things BUT in typical fashion, you only 
-                  get a piece of information and you need more info to figure out who's network account is about to lose ALL access. I mean removing someone's 
-                  access and giving them a day off could be really bad... in the eyes of a manager &#128521; Soo, to be sure you don't make that "mistake", this little 
-                  AD searcher provides a flexible interface to quickly query Active Directory with results returned in a clean grid format that also provides
-                  interactive sorting to be sure you find that user account that is going to lose all access. This tool also shows security groups for those 
-                  times when say, Aria says she needs the same file share access as Tyrion and Jon but for some reason she can't access the file share. Well, 
-                  is it because she's not in some security group that Tyrion and Jon are?
+                  Let's say you manage access for various things that are driven by Active Directory where AD groups drive role-based access controls and/or
+                  feed into other systems like perhaps SharePoint, Cloud infrastructure (Azure, AWS, Google, etc.), MS Entra ID, Azure Key vault, etc. Then one 
+                  day you receive a ticket request to remove ALL access for a particular user account. And because these other systems were never integrated this is
+                  a manual task to identify the network Id (AD account) or user's name or user's email address, etc. depending on the system. You see how this can
+                  quite quickly spiral into a bit of a challenge? I mean removing someone's access and giving them a day off could be really bad! in the eyes of a 
+                  manager &#128521; Soo, to be sure you don't make that "mistake", this little tool enables you to search Active Directory on a few key indicators like
+                  network id, username, and Business Area to quickly confirm the account in question. This also includes other key indicators like their direct manager,
+                  active status, account created date, etc. for additional verification points. This tool also shows security groups to help with other support needs 
+                  like times when say... Aria Stark contacts you and says she needs the same file share access as Tyrion Lannister and Jon Snow because they now work
+                  together but for some reason she can't access the file share. Well, could it be because she's not in a security group that Tyrion and Jon are in?
+                  This tool allows you to quickly dig into AD account details and groups to help with many common tasks and verification points.
                   <div class="mt-3">
                     <strong>Key Technologies</strong>: .NET C#, OOP, LINQ, Active Directory queries.
                   </div>
                   <div class="mt-3" style="text-align: center;">
-                    <button class="btn btn-dark" type="button" id="viewCodeButton" onclick="alert('Not yet implemented to view code.');">
+                    <button class="btn btn-dark" type="button" id="viewCodeButton" onclick="navigateToCode ('ADSearch');">
                     Click to View Code
                     </button>
                   </div>
